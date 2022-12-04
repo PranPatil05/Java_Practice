@@ -23,7 +23,6 @@ public class listPractice {
         System.out.println(al.contains("pranav")); //false
         System.out.println(al.isEmpty()); //false
 
-
     }
 
 }
