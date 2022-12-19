@@ -69,6 +69,25 @@ public class listPractice {
         while (lit.hasPrevious()){
             System.out.println(lit.previous());
         }
+
+        Employee e1=new Employee(10,"Pranav");
+        Employee e2=new Employee(20,"Anuj");
+        Employee e3=new Employee(30,"Ram");
+        Employee e4=new Employee(30,"Ram");
+        Employee e5=new Employee(40,"Anuj");
+        Employee e6=new Employee(10,"Sham");
+
+        ArrayList al3=new ArrayList<>();
+        al3.add(e1);
+        al3.add(e2);
+        al3.add(e3);
+        al3.add(e4);
+        al3.add(e5);
+        al3.add(e6);
+
+        System.out.println(al3);
+
+
     }
 
 }
