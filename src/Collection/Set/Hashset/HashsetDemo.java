@@ -1,6 +1,4 @@
-package Collection.Set;
-
-import Collection.Student;
+package Collection.Set.Hashset;
 
 import java.util.HashSet;
 
