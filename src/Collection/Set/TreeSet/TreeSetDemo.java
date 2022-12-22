@@ -2,6 +2,7 @@ package Collection.Set.TreeSet;
 
 import Collection.List.Employee;
 
+import java.util.Iterator;
 import java.util.Objects;
 import java.util.TreeSet;
 
@@ -33,6 +34,13 @@ public class TreeSetDemo {
         ts1.add(e4);
         ts1.add(e5);
         ts1.add(e6);
+
+//        System.out.println("\nIterator Over set= ");
+//
+//        Iterator it=ts1.iterator();
+//        while (it.hasNext()){
+//            System.out.println(it.next());
+//        }
 
         System.out.println(ts1);
         System.out.println("\n"+"Notes: ");
