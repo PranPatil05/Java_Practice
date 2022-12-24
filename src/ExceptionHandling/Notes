@@ -1,0 +1,78 @@
+Control flow in nested try – catch – finally
+The following program will demonstrates the flow of nested try –catch – finally.
+Ex:
+    try
+        {
+         statement 1;
+         statement 2;
+         statement 3;
+                try
+                {
+                 statement 4;
+                 statement 5;
+                 statement 6;
+                }
+                catch (X e)
+                {
+                statement 7;
+                }
+                finally
+                {
+                statement 8;
+                }
+                statement 9;
+                }
+    catch (Y e)
+    {
+    statement 10;
+    }
+    finally
+    {
+    statement 11;
+    }
+    statement 12;
+
+
+Case1: if there is no exception then the statements 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12 will execute with
+normal termination.
+
+Case2: if an exception raised at statement-2 and the corresponding catch block matched then the
+statements 1, 10, 11, 12 will execute with normal termination.
+
+Case3: if an exception raised at statement-2 but the corresponding catch block not matched then the
+statements 1, 11, 12 will execute with abnormal termination.
+
+Case4: if an exception raised at statement-5 and the corresponding inner catch has matched then the
+statements 1, 2, 3, 4, 7, 8, 9, 11, 12 will execute with normal termination.
+
+Case5: if an exception raised at statement-5 and the inner catch has not matched but outer catch has
+matched then the statements 1, 2, 3, 4, 8, 10, 11, 12 will execute with normal termination.
+
+Case6: if an exception raised at statement-5 but the inner and outer catch blocks are not matched
+then the statements 1, 2, 3, 4, 8, 11 will execute with abnormal termination.
+
+Case7: if an exception raised at statement-7 and
+i) If outer catch block has matched then the statements 1, 2, 3, - - - 8, 10, 11, 12 will
+execute with normal termination.
+
+ii) If the outer catch block has not matched then the statements 1, 2, 3, - - - 8, 11 will
+execute with abnormal termination.
+
+Case8: if an exception raised at statement-8 and
+i) If outer catch has matched then the statements 1, 2, 3, - - - will execute with normal
+termination.
+ii) If outer catch has not matched then the statements 1, 2, 3, - - - 11 will execute with
+abnormal termination.
+
+Case9: if an exception raised at statement-9 and
+i) If the outer catch has matched then the statements 1, 2, 3 - - -8, 10, 11, 12 will
+execute with normal termination.
+ii) If the outer catch has not matched then the statements 1, 2, 3 - - -8, 11 will execute
+with abnormal termination.
+
+Case10: if an exception raised at statement-10 it is always abnormal termination but before
+termination compulsory the finally block should be executed.
+
+Case11: if an exception raised at statement-11 or 12 it is always abnormal termination
+
+
